@@ -1,0 +1,50 @@
+<!-- app/views/pages/explore.html.erb -->
+
+<div class="wall-wrapper">
+  
+  <!-- Render the reusable top navigation bar -->
+  <%= render 'layouts/wall_nav' %>
+
+  <!-- Secondary Explore Navigation -->
+  <nav class="explore-nav navbar navbar-expand-lg navbar-dark">
+    <!-- Centering the nav items using Bootstrap's flex utilities -->
+    <div class="container-fluid justify-content-center">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a href="#" class="nav-link">For You</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Friends & Following</a></li>
+        <li class="nav-item"><a href="#" class="nav-link active">Kinky & Popular</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Fresh & Pervy</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Stuff You'll Love</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content Grid - removed top margin to butt it against the nav above -->
+  <main class="container-fluid pt-4">
+    <div class="explore-grid row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4">
+      
+      <!-- Loop through posts and display them in an "Etsy-style" card format -->
+      <% @explore_posts.each do |post| %>
+        <div class="col">
+          <div class="card explore-card h-100">
+            <!-- For now, we use a placeholder image. Later this could be the post's image. -->
+            <a href="#" class="explore-card-link">
+              <img src="https://placehold.co/400x300/333/ccc?text=Post+Image" class="card-img-top" alt="Post content preview">
+              <div class="card-img-overlay d-flex flex-column justify-content-end">
+                <p class="card-text post-preview-text"><%= truncate(post.content, length: 50) %></p>
+              </div>
+            </a>
+            <div class="card-footer explore-card-footer">
+              <small class="text-muted">
+                <img src="https://placehold.co/24x24/efefef/1a1a1a?text=U" alt="author avatar" class="rounded-circle me-1">
+                <%= post.user.nickname %>
+              </small>
+            </div>
+          </div>
+        </div>
+      <% end %>
+
+    </div>
+  </main>
+
+</div>

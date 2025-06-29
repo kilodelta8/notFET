@@ -1,0 +1,61 @@
+<!-- app/views/layouts/_wall_nav.html.erb -->
+
+<!-- Top Navigation Bar -->
+<nav class="wall-nav navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container-fluid">
+    <!-- Logo/Refresh Link -->
+    <a class="navbar-brand logo-icon" href="<%= posts_path %>">
+      FL
+    </a>
+
+    <!-- Search Box -->
+    <form class="d-flex search-form me-auto">
+      <div class="input-group">
+        <span class="input-group-text search-icon-span"><i class="fas fa-search"></i></span>
+        <input class="form-control form-control-sm" type="search" placeholder="Search" aria-label="Search">
+      </div>
+    </form>
+
+    <!-- Main Navigation Links -->
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="<%= root_path %>">Home</a>
+        </li>
+        <li class="nav-item">
+          <!-- This link will now point to our new explore page -->
+          <a class="nav-link" href="<%= explore_path %>">Explore</a>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="<% groups_path %>">Groups</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Events</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Places</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            More
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Kinksters</a></li>
+            <li><a class="dropdown-item" href="#">Videos</a></li>
+            <li><a class="dropdown-item" href="#">Writings</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Right-Side Action Icons & Avatar -->
+    <div class="d-flex align-items-center right-nav-actions">
+      <a href="#" class="nav-icon"><i class="fas fa-plus"></i></a>
+      <a href="#" class="nav-icon"><i class="fas fa-envelope"></i></a>
+      <a href="#" class="nav-icon"><i class="fas fa-user-plus"></i></a>
+      <a href="#" class="nav-icon"><i class="fas fa-bell"></i></a>
+      <a href="#" class="nav-avatar ms-2">
+        <img src="https://placehold.co/32x32/efefef/1a1a1a?text=U" alt="User Avatar" class="rounded-circle">
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- Hiring Banner --
+<div class="hiring-banner text-center py-1">
+  [HIRING] Product Designer, Full Stack Engineer, Jr. Product Manager, and Customer Support!
+</div-->

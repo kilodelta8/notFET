@@ -1,0 +1,332 @@
+/* app/assets/stylesheets/custom.css */
+
+/* --- General Body and Theme --- */
+/* This would ideally be on the body tag, but for a component-based approach,
+   we wrap the page in a container. This style should be applied to the <body>
+   tag in your `application.html.erb` layout file for best results. */
+   body {
+    background-color: #1a1a1a;
+    color: #d9d9d9;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+  
+  .homepage-wrapper a {
+    color: #d63384; /* A Bootstrap-like pink for links */
+    text-decoration: none;
+  }
+  
+  .homepage-wrapper a:hover {
+    color: #e860a6;
+    text-decoration: underline;
+  }
+  
+  /* --- Header --- */
+  .homepage-header {
+    background-color: #000;
+    border-bottom: 1px solid #333;
+  }
+  
+  .logo-text {
+    font-family: 'Arial Black', Gadget, sans-serif;
+    color: #fff;
+    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: 0;
+    text-transform: lowercase;
+  }
+  
+  .btn-login {
+    background-color: #555;
+    color: #fff;
+    border: 1px solid #777;
+  }
+  
+  .btn-login:hover {
+    background-color: #666;
+    color: #fff;
+  }
+  
+  /* --- Main Hero Section --- */
+  .main-content {
+    padding-top: 3rem;
+    padding-bottom: 4rem;
+  }
+  
+  .tagline {
+    font-size: 2.25rem;
+    font-weight: 300;
+    color: #fff;
+    line-height: 1.2;
+  }
+  
+  .description {
+    font-size: 1.1rem;
+    color: #ccc;
+    line-height: 1.6;
+  }
+  
+  /* --- Signup Form --- */
+  .signup-form-wrapper {
+    background-color: #2b2b2b;
+    border: 1px solid #444;
+    border-radius: 8px;
+  }
+  
+  .signup-title {
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  .signup-form-wrapper .form-control {
+    background-color: #1a1a1a;
+    border: 1px solid #555;
+    color: #fff;
+  }
+  
+  .signup-form-wrapper .form-control::placeholder {
+    color: #888;
+  }
+  
+  .signup-form-wrapper .form-control:focus {
+    background-color: #1a1a1a;
+    border-color: #d63384;
+    box-shadow: 0 0 0 0.25rem rgba(214, 51, 132, 0.25);
+    color: #fff;
+  }
+  
+  .btn-signup {
+    background-color: #e51a66;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 0.75rem;
+    border: none;
+  }
+  
+  .btn-signup:hover {
+    background-color: #c21657;
+    color: #fff;
+  }
+  
+  .form-terms {
+    font-size: 0.8rem;
+    color: #999;
+  }
+  
+  /* --- What is FetLife Section --- */
+  .what-is-fetlife-section {
+    background-color: #222;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+  }
+  
+  .section-title {
+    color: #fff;
+    font-weight: 300;
+  }
+  
+  .section-text {
+    color: #ccc;
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+  
+  /* --- Footer --- */
+  .homepage-footer {
+    background-color: #000;
+    font-size: 0.9rem;
+  }
+  
+  .copyright-text {
+    color: #777;
+    font-size: 0.8rem;
+  }
+  
+  /* --- Wall Page Wrapper & Theme --- */
+.wall-wrapper {
+  background-color: #1a1a1a;
+  color: #d9d9d9;
+  padding-top: 110px; /* Adjust based on navbar + banner height */
+}
+
+/* --- Top Navigation Bar --- */
+.wall-nav {
+  background-color: #111;
+  border-bottom: 1px solid #333;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.logo-icon {
+  background-color: #333;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 4px;
+  padding: 0.25rem 0.6rem;
+  font-size: 1.2rem;
+}
+.logo-icon:hover {
+  background-color: #444;
+  color: #fff;
+}
+
+.search-form .form-control {
+  background-color: #2b2b2b;
+  border: 1px solid #444;
+  color: #fff;
+  border-left: none;
+  border-radius: 0 0.25rem 0.25rem 0;
+  font-size: 0.9rem;
+}
+.search-form .form-control:focus {
+  background-color: #2b2b2b;
+  box-shadow: none;
+  border-color: #444;
+  color: #fff;
+}
+.search-icon-span {
+  background-color: #2b2b2b;
+  border: 1px solid #444;
+  color: #888;
+  border-right: none;
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+
+.wall-nav .nav-link {
+  color: #ccc;
+  font-weight: bold;
+}
+.wall-nav .nav-link.active,
+.wall-nav .nav-link:hover {
+  color: #fff;
+}
+
+.right-nav-actions .nav-icon {
+  color: #ccc;
+  font-size: 1.25rem;
+  margin: 0 0.75rem;
+}
+.right-nav-actions .nav-icon:hover {
+  color: #fff;
+}
+
+/* --- Hiring Banner --- */
+.hiring-banner {
+  background-color: #6a0dad; /* Purple */
+  color: white;
+  font-weight: bold;
+  font-size: 0.9rem;
+  width: 100%;
+  position: fixed;
+  top: 56px; /* Position below the navbar */
+  z-index: 1025;
+}
+
+/* --- Main Content Layout --- */
+.wall-main-content {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+/* --- Left Sidebar --- */
+.left-sidebar .sidebar-heading {
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: #888;
+  text-transform: uppercase;
+  padding: 0 0.75rem;
+}
+.left-sidebar .sidebar-nav .nav-link {
+  color: #ccc;
+  padding: 0.3rem 0.75rem;
+  border-radius: 4px;
+}
+.left-sidebar .sidebar-nav .nav-link.active,
+.left-sidebar .sidebar-nav .nav-link:hover {
+  color: #fff;
+  background-color: #2b2b2b;
+}
+.sidebar-hr {
+  border-color: #444;
+}
+
+/* --- Center Feed --- */
+.new-post-card {
+  background-color: #2b2b2b;
+  border: 1px solid #444;
+}
+.post-textarea {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  resize: none;
+}
+.post-textarea:focus {
+  background-color: transparent;
+  box-shadow: none;
+  color: #fff;
+}
+.post-action-link {
+  color: #888;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 1rem;
+}
+.post-action-link:hover {
+  color: #ccc;
+}
+.feed-heading {
+  color: #888;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border-bottom: 1px solid #444;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Post Card Styling */
+.post-card {
+  background-color: #2b2b2b;
+  border: 1px solid #444;
+}
+.post-author {
+  color: #fff;
+  font-weight: bold;
+}
+.post-meta {
+  font-size: 0.8rem;
+}
+.post-content {
+  color: #d9d9d9;
+}
+.ama-box {
+  border: 1px solid #555;
+  border-radius: 6px;
+  background-color: #1e1e1e;
+}
+.btn-ask {
+  background-color: #e51a66;
+  color: #fff;
+  border: none;
+}
+.btn-ask:hover {
+  background-color: #c21657;
+  color: #fff;
+}
+.interaction-link {
+  color: #888;
+  text-decoration: none;
+  font-weight: bold;
+  margin-right: 1.5rem;
+}
+.interaction-link:hover {
+  color: #ccc;
+  text-decoration: underline;
+}
+
+/* --- Right Sidebar --- */
+.right-sidebar .ad-placeholder {
+  background-color: #2b2b2b;
+  border: 1px solid #444;
+  border-radius: 8px;
+}

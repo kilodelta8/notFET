@@ -1,0 +1,105 @@
+<!-- app/views/posts/index.html.erb -->
+
+<!-- Main Wall Page Wrapper with Dark Theme -->
+<div class="wall-wrapper">
+
+  <!-- Render the reusable top navigation bar -->
+  <%= render 'layouts/wall_nav' %>
+
+  
+  <!-- Main Content Area -->
+  <main class="container-fluid wall-main-content">
+    <div class="row">
+
+      <!-- Left Sidebar: Feed Filters -->
+      <div class="col-lg-2 left-sidebar">
+        <h6 class="sidebar-heading">FEEDS</h6>
+        <ul class="nav flex-column sidebar-nav">
+          <li class="nav-item"><a href="#" class="nav-link active">All Activity</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">All Posts</a></li>
+        </ul>
+
+        <hr class="sidebar-hr">
+
+        <ul class="nav flex-column sidebar-nav">
+          <li class="nav-item"><a href="#" class="nav-link">Groups</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Statuses</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Pictures</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Videos</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Writings</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">AMA</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Audio</a></li>
+        </ul>
+      </div>
+
+      <!-- Center Column: Main Feed -->
+      <div class="col-lg-7 center-feed">
+
+        <!-- New Post Form -->
+        <div class="card new-post-card mb-4">
+          <div class="card-body">
+            <textarea class="form-control post-textarea" placeholder="What's on your kinky mind?"></textarea>
+            <div class="d-flex justify-content-end align-items-center mt-2">
+              <a href="#" class="post-action-link"><i class="fas fa-image"></i> Upload Pic</a>
+              <a href="#" class="post-action-link"><i class="fas fa-video"></i> Upload Vid</a>
+              <a href="#" class="post-action-link"><i class="fas fa-pen-alt"></i> Write</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Latest Activity Heading -->
+        <h5 class="feed-heading">Latest Activity</h5>
+
+        <!-- Scaffolding for a single post -->
+        <% 3.times do |i| %>
+          <div class="card post-card mb-3">
+            <div class="card-body">
+              <div class="d-flex align-items-start">
+                <img src="https://placehold.co/48x48/efefef/1a1a1a?text=U" alt="User Avatar" class="rounded-circle me-3">
+                <div class="w-100">
+                  <h6 class="post-author mb-0">StilettoPrincess</h6>
+                  <small class="post-meta text-muted">5 minutes ago</small>
+                  <p class="post-content mt-2">
+                    My AMA is live! Ask me an anonymous question below!
+                  </p>
+                  <!-- Placeholder for AMA content -->
+                  <div class="ama-box p-3">
+                    <p class="text-muted">What do you want to ask me?</p>
+                    <div class="d-flex justify-content-end">
+                      <button class="btn btn-sm btn-ask">Ask Question</button>
+                    </div>
+                  </div>
+                  <div class="post-interactions mt-2 d-flex justify-content-between">
+                    <div>
+                      <a href="#" class="interaction-link">Love</a>
+                      <a href="#" class="interaction-link">Comment</a>
+                    </div>
+                    <div>
+                      <a href="#" class="interaction-link"><i class="fas fa-flag"></i></a>
+                      <a href="#" class="interaction-link"><i class="fas fa-bookmark"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        <% end %>
+
+      </div>
+
+      <!-- Right Sidebar: Ads -->
+      <div class="col-lg-3 right-sidebar">
+        <div class="ad-placeholder p-3">
+            <h6 class="text-muted text-center">ADVERTISEMENT</h6>
+            <img src="https://placehold.co/300x250/cccccc/999999?text=Ad+Space" class="img-fluid" alt="Ad placeholder">
+        </div>
+        <div class="ad-placeholder p-3 mt-3">
+            <h6 class="text-muted text-center">ANOTHER AD</h6>
+            <img src="https://placehold.co/300x250/cccccc/999999?text=Ad+Space" class="img-fluid" alt="Ad placeholder">
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+</div>

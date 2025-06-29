@@ -1,0 +1,103 @@
+<!-- app/views/pages/home.html.erb -->
+
+<div class="homepage-wrapper">
+  <!-- Header Section -->
+  <header class="homepage-header d-flex justify-content-between align-items-center p-3">
+    <div class="logo">
+      <h1 class="logo-text">notFET</h1>
+    </div>
+    <div class="login-section">
+      <form class="d-flex align-items-center">
+        <div class="me-2">
+          <input type="text" class="form-control form-control-sm" placeholder="Nickname">
+        </div>
+        <div class="me-3">
+          <input type="password" class="form-control form-control-sm" placeholder="Password">
+        </div>
+        <button type="submit" class="btn btn-sm btn-login">Log In</button>
+      </form>
+    </div>
+  </header>
+
+  <!-- Hero/Main Content Section -->
+  <main class="main-content container-fluid">
+    <div class="row justify-content-center">
+      <!-- Left Side - Description -->
+      <div class="col-lg-5 col-md-6 pt-5 pe-lg-5">
+        <h2 class="tagline">The social network for the BDSM, Fetish, and Kinky community.</h2>
+        <p class="description">
+          Like Facebook, but run by kinky people like you. notFET is the perfect place to meet other members of the kinky community, make new friends, and find out about events in your area.
+        </p>
+        <p class="description">
+          Signing up is free and only takes a minute.
+        </p>
+      </div>
+
+      <!-- Right Side - Signup Form -->
+      <div class="col-lg-4 col-md-6 pt-md-5">
+        <div class="signup-form-wrapper p-4">
+          <h3 class="signup-title text-center mb-4">Join over 14,023,493 members!</h3>
+          <%= form_with(model: @user, url: users_path, local: true, class: "signup-form") do |f| %>
+            <div class="mb-3">
+              <%= f.text_field :nickname, class: "form-control", placeholder: "Choose a Nickname" %>
+            </div>
+            <div class="mb-3">
+              <%= f.email_field :email, class: "form-control", placeholder: "Email Address" %>
+            </div>
+            <div class="mb-3">
+              <%= f.password_field :password, class: "form-control", placeholder: "Create a Password" %>
+            </div>
+             <div class="mb-3">
+              <%= f.date_field :birthdate, class: "form-control" %>
+            </div>
+            <div class="d-grid">
+              <%= f.submit "Join FetLife", class: "btn btn-signup" %>
+            </div>
+            <p class="form-terms text-center mt-3">
+              By clicking Join FetLife, you agree to our <a href="#">Terms of Use</a>.
+            </p>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- What is FetLife Section -->
+  <section class="what-is-fetlife-section py-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <h2 class="section-title text-center mb-4">What is notFET?</h2>
+          <p class="section-text">
+            notFET is the largest social network for the BDSM, fetish, and kinky community. 
+            We're a little like Facebook, but with a lot more rope, leather, and sex-positive people. 
+            Think of us as your friendly, kinky neighborhood bar. It's a place to meet new people, 
+            make friends, and find out about the latest events in your area. We are also a great place 
+            to find out about local munches, classes, and other BDSM-related events.
+          </p>
+          <p class="section-text">
+            We are dedicated to creating a safe and welcoming community for all our members. We have 
+            a zero-tolerance policy for harassment and bullying. We are also committed to protecting 
+            our members' privacy. We will never sell your personal information to third parties.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="homepage-footer text-center py-4">
+    <div class="container">
+      <p class="mb-1">
+        <a href="#">About</a> &middot;
+        <a href="#">Contact</a> &middot;
+        <a href="#">Kinkopedia</a> &middot;
+        <a href="#">Press</a> &middot;
+        <a href="#">Terms of Use</a> &middot;
+        <a href="#">Privacy Policy</a>
+      </p>
+      <p class="copyright-text mb-0">&copy; 2008-2024 love-bits Inc. All rights reserved.</p>
+    </div>
+  </footer>
+
+</div>
